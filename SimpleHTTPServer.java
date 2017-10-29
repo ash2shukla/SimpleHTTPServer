@@ -49,7 +49,12 @@ class SimpleHTTPServer{
                 }
                 out.write("\r\n".getBytes());
                 out.write(data);
+                in.close();
+                out.close();
+                socket.close();
            }
+           
+           
      }
 }
 
